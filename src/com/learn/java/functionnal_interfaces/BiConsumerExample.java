@@ -1,4 +1,4 @@
-package com.learn.java.functionnalInterfaces;
+package com.learn.java.functionnal_interfaces;
 
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -15,7 +15,6 @@ public class BiConsumerExample {
 
     List<Student> studentList = StudentDataBase.getAllStudents();
     studentList.forEach(student -> nameAndAct.accept(student.getName(), student.getActivities()));
-
   }
 
   public static void main(String[] args) {

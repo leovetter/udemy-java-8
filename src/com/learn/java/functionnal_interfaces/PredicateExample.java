@@ -1,4 +1,4 @@
-package com.learn.java.functionnalInterfaces;
+package com.learn.java.functionnal_interfaces;
 
 import java.util.function.Predicate;
 
@@ -16,8 +16,13 @@ public class PredicateExample {
 
   public static void predicateOr() {
 
-    System.out.println("predicate OR result 1 : " + p1.or(p2).test(10)); //predicate chaining
-    System.out.println("predicate OR result 2 : " + p1.or(p2).test(8)); //predicate chaining
+    System.out.println("predicate OR result 1 : " + p1.or(p2).test(10));
+    System.out.println("predicate OR result 2 : " + p1.or(p2).test(8));
+  }
+
+  public static void predicateNegate() {
+
+    System.out.println("predicate NEGATE result 2 : " + p1.or(p2).negate().test(8));
   }
 
   public static void main(String[] args) {
@@ -26,5 +31,6 @@ public class PredicateExample {
 
     predicateAnd();
     predicateOr();
+    predicateNegate();
   }
 }

@@ -1,4 +1,4 @@
-package com.learn.java.functionnalInterfaces;
+package com.learn.java.functionnal_interfaces;
 
 import java.util.List;
 import java.util.function.Consumer;
