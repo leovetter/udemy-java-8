@@ -2,12 +2,19 @@ package com.learn.java.data;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class StudentDataBase {
 
-    public static Supplier<Student> studentSupplier = ()
-            -> new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+    public static Supplier<Student> studentSupplier = () -> {
+        Bike bike = new Bike();
+        bike.setName("bike 1");
+        bike.setModel("bmx");
+        Student s = new Student("Adam", 2, 3.6, "male", Arrays.asList("swimming", "basketball", "volleyball"));
+        s.setBike(Optional.ofNullable(bike));
+        return s;
+    };
 
     /**
      * Total of 6 students in the database.
@@ -31,7 +38,7 @@ public class StudentDataBase {
         Student student5 = new Student("Sophia",4,3.5,"female", Arrays.asList("swimming", "dancing","football"));
         Student student6 = new Student("James",4,3.9,"male", Arrays.asList("swimming", "basketball","baseball","football"));
 
-        List<Student> students = Arrays.asList(student1,student2,student3,student4,student5,student6);
+        List<Student> students = Arrays.asList(student1,student2,student3,student4,student5,student6, null);
         return students;
     }
 }

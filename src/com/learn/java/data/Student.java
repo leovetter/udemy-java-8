@@ -2,6 +2,9 @@ package com.learn.java.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import javax.swing.text.html.Option;
 
 public class Student {
     private String name;
@@ -9,6 +12,7 @@ public class Student {
     private double gpa;
     private String gender;
     List<String> activities = new ArrayList<>();
+    Optional<Bike> bike = Optional.empty();
 
     public Student() {}
 
@@ -64,20 +68,21 @@ public class Student {
         this.activities = activities;
     }
 
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
+    }
+
     public void printListOfActivities() {
         System.out.println(activities);
     }
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", gradeLevel=" + gradeLevel +
-                ", gpa=" + gpa +
-                ", gender='" + gender + '\'' +
-                ", activities=" + activities +
-                '}';
+        return "Student{" + "name='" + name + '\'' + ", gradeLevel=" + gradeLevel + ", gpa=" + gpa + ", gender='"
+            + gender + '\'' + ", activities=" + activities + ", bike=" + bike + '}';
     }
-
-
 }
